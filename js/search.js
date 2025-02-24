@@ -7,6 +7,15 @@ async function search(city, state, country){
     if(url.ok){
     let data = await url.json();
     console.log(data);
+
+    const locationData = {
+      lat: data.coord.lat,
+      lon: data.coord.lon,
+      name: data.name,
+      timestamp: Date.now(),
+      isSearched: true
+  };
+  localStorage.setItem('weatherLocation', JSON.stringify(locationData));
     
     let box = document.querySelector(".return");
     box.style.display = "block";
@@ -64,3 +73,7 @@ searchinput.addEventListener('keydown', function(event) {
         console.log("worked")
       }
   });
+
+
+  localStorage.setItem("selectedCity", cityName);
+

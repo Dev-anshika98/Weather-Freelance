@@ -164,7 +164,8 @@ async function searchLocation(city) {
                 lat,
                 lon,
                 name,
-                timestamp: Date.now()
+                timestamp: Date.now(),
+                isSearched: true
             };
             localStorage.setItem('weatherLocation', JSON.stringify(locationData));
             
@@ -198,7 +199,7 @@ async function handleSearch(city) {
             
             // Fetch and update weather data
             const weatherResponse = await fetch(
-                `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=1e3e8f230b6064d27976e41163a82b77`
+                `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`
             );
             const weatherData = await weatherResponse.json();
             
@@ -237,3 +238,24 @@ const activitiesButton = `
 
 // Insert the button after the weather description div
 document.querySelector('.weather-description').insertAdjacentHTML('afterend', activitiesButton);
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("searchButton").addEventListener("click", function () {
+        let city = document.getElementById("searchInput").value.trim();  // Trim spaces
+
+        if (city) {
+            fetchWeather(city);  // Fetch weather for searched city
+            localStorage.setItem("selectedCity", city);  // Store city in localStorage
+        }
+    });
+
+    // Load last searched city when the page loads
+    let savedCity = localStorage.getItem("selectedCity");
+    if (savedCity) {
+        fetchWeather(savedCity);  // Show last searched city's weather
+    }
+});
+
+
+
