@@ -1,0 +1,112 @@
+.weather-summary {
+    text-align: center;
+    margin: 20px 0;
+    color: var(--font-color-main);
+}
+
+.current-temp {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.weather-condition {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.activities-grid {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.activity-category h3 {
+    color: var(--font-color-main);
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.activity-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.activity-item {
+    background: var(--white-color);
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.activity-item i {
+    font-size: 20px;
+    color: var(--font-color-main);
+    width: 24px;
+}
+
+.activity-item span {
+    font-weight: 500;
+    color: var(--font-color-main);
+}
+
+.recommendation {
+    margin-left: auto;
+    font-size: 14px;
+    padding: 4px 8px;
+    border-radius: 8px;
+}
+
+.recommendation.excellent {
+    background: rgba(76, 175, 80, 0.1);
+    color: #2E7D32;
+}
+
+.recommendation.good {
+    background: rgba(255, 193, 7, 0.1);
+    color: #F57F17;
+}
+
+.recommendation.fair {
+    background: rgba(255, 152, 0, 0.1);
+    color: #E65100;
+}
+
+.recommendation.poor {
+    background: rgba(244, 67, 54, 0.1);
+    color: #C62828;
+}
+
+
+.error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px;
+    text-align: center;
+}
+
+.recommendation {
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+}
+
+.recommendation.excellent {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.recommendation.good {
+    background-color: #fff3e0;
+    color: #f57c00;
+}
+
+.recommendation.poor {
+    background-color: #ffebee;
+    color: #c62828;
+}

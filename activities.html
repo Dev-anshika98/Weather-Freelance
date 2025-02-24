@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Activities</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/activities.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="pc">
+      <div id="screen">
+        <!-- City Name Section -->
+        <div class="city-name">
+          <i class="fa-solid fa-location-dot"></i>
+          <h2 id="city">City Name</h2>
+        </div>
+
+        <!-- Current Weather Summary -->
+        <div class="weather-summary">
+          <div class="current-temp" id="current-temp">24°C</div>
+          <div class="weather-condition" id="weather-condition">Sunny</div>
+        </div>
+
+        <!-- Activities Grid -->
+        <div class="activities-grid">
+          <div class="activity-category">
+            <h3>Outdoor Sports</h3>
+            <div class="activity-items">
+              <div class="activity-item">
+                <i class="fas fa-running"></i>
+                <span>Running</span>
+                <div class="recommendation excellent">
+                  Best time: 7:00 AM
+                </div>
+              </div>
+              <div class="activity-item">
+                <i class="fas fa-bicycle"></i>
+                <span>Cycling</span>
+                <div class="recommendation good">
+                  Best time: 8:00 AM
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="activity-category">
+            <h3>Leisure</h3>
+            <div class="activity-items">
+              <div class="activity-item">
+                <i class="fas fa-umbrella-beach"></i>
+                <span>Beach Time</span>
+                <div class="recommendation fair">
+                  Best time: 2:00 PM
+                </div>
+              </div>
+              <div class="activity-item">
+                <i class="fas fa-utensils"></i>
+                <span>Outdoor Dining</span>
+                <div class="recommendation excellent">
+                  Best time: 6:00 PM
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="activity-category">
+            <h3>Nature</h3>
+            <div class="activity-items">
+              <div class="activity-item">
+                <i class="fas fa-hiking"></i>
+                <span>Hiking</span>
+                <div class="recommendation good">
+                  Best time: 9:00 AM
+                </div>
+              </div>
+              <div class="activity-item">
+                <i class="fas fa-tree"></i>
+                <span>Gardening</span>
+                <div class="recommendation fair">
+                  Best time: 4:00 PM
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html"><i class="fa-solid fa-house"></i></a>
+            </li>
+            <li>
+              <a href="activities.html" class="active"
+                ><i class="fa-solid fa-person-running"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-gear"></i></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <script src="js/activities.js"></script>
+  </body>
+</html>
